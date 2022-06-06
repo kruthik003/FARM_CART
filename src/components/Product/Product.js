@@ -2,9 +2,10 @@ import React from "react";
 import "./Product.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-
+import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
+import { useStateValue } from "../../StateProvider";
 
 const useStyles = makeStyles({
   root: {
@@ -25,6 +26,22 @@ const useStyles = makeStyles({
 function Product({ id, title, image, price, rating }) {
   const classes = useStyles();
 
+  const [{ basket }, dispatch] = useStateValue();
+
+  const addToBasket = () => {
+    // dispatch the item into the data layer
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+        rating: rating,
+      },
+    });
+  };
+
   return (
     <Card className="product" variant="outlined">
       <CardContent className="product__info">
@@ -44,7 +61,7 @@ function Product({ id, title, image, price, rating }) {
 
       <img src={image} />
 
-      <button>Add to Basket</button>
+      <button onClick={addToBasket}>Tambah Keranjang</button>
     </Card>
   );
 }
