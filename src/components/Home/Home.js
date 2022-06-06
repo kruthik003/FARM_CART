@@ -17,14 +17,14 @@ function Home() {
             id="1112233456"
             title="Kalitemu Super"
             price={1000}
-            rating={4}
+            rating={1}
             image="https://drive.google.com/uc?id=1YAWjnP64nnRO54MU8ypgzcBBgEXUo3Qh"
           />
           <Product
             id="223344567"
             title="Buwung Lepang"
             price={4000}
-            rating={4}
+            rating={3}
             image="https://drive.google.com/uc?id=1Oz7ZBv6UKxrlDst8y6ChKIoJr3mzF43V"
           />
         </div>
@@ -34,7 +34,7 @@ function Home() {
             id="33445678"
             title="Pejaten XL"
             price={5000}
-            rating={5}
+            rating={2}
             image="https://drive.google.com/uc?id=12wbr82MVukJ135CPWPhlxrgKExZ8mzoW"
           />
           <Product
@@ -48,7 +48,7 @@ function Home() {
             id="5566777889"
             title="Buwung Bintang L"
             price={6000}
-            rating={3}
+            rating={1}
             image="https://drive.google.com/uc?id=1gGRxCG-OGikVm4bdwqZpQoiFIFI2qv4a"
           />
         </div>
