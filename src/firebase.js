@@ -3,12 +3,13 @@ import "firebase/compat/firestore";
 import "firebase/compat/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCURFv1V3YS_kqSKlX9X_KinVmt0cpWyYs",
-  authDomain: "getama-industry.firebaseapp.com",
-  projectId: "getama-industry",
-  storageBucket: "getama-industry.appspot.com",
-  messagingSenderId: "874634832596",
-  appId: "1:874634832596:web:cd71b86a72ff711a92e941",
+  apiKey: "AIzaSyCh61OUSoqM-Pzs0VBTkzIKSMcW2dGHAuw",
+  authDomain: "farm-cart-eb0ce.firebaseapp.com",
+  projectId: "farm-cart-eb0ce",
+  storageBucket: "farm-cart-eb0ce.appspot.com",
+  messagingSenderId: "367389776687",
+  appId: "1:367389776687:web:a807a98b7355c0dff6dfda",
+  measurementId: "G-ZZ3HKLXWLC"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);

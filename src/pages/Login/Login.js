@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import Typography from "@material-ui/core/Typography";
 import { auth } from "../../firebase";
-
+import images from '../../Image'
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
@@ -58,52 +58,29 @@ function Login() {
   const classes = useStyles();
 
   return (
-    <Card className="login" variant="outlined">
-      <Link to="/">
-        <img
-          className="login__logo"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
-        />
-      </Link>
-
-      <div className="login__container">
-        <h1>Sign-in</h1>
-
-        <FormControl>
-          <h5>E-mail</h5>
-          <Input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-
-          <h5>Password</h5>
-          <Input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-
-          <Button
-            type="submit"
-            onClick={signIn}
-            className="login__signInButton "
-          >
-            Sign In
-          </Button>
-        </FormControl>
-
-        <Typography>
-          Dengan mendaftarkan akun anda menyetujiui persyaratan dari Getama
-          Shop.
-        </Typography>
-
-        <Button onClick={register} className="login__registerButton">
-          Buat akun Getama Shop
-        </Button>
-      </div>
-    </Card>
-  );
+    <div className = 'login'>
+        <img className = 'back_image'src = {images['back_image.jpeg']}/>
+        <Link to = '/'>
+      <img className = 'login_logo' src = {images['logo.png']}></img>
+       </Link>
+       <div className = 'login_container'>
+        <h1>Sign in</h1>
+        <form>
+            <h5>E-mail</h5>
+            <input type = 'email' value = {email} onChange = {e => setEmail(e.target.value)}/>
+            <h5>Password</h5>
+            <input type = 'password' value = {password} onChange={e => setPassword(e.target.value)}/>
+            <button type = 'submit' onClick = {signIn} className = 'signIn_button'>Sign In</button>
+        </form>
+        <p>
+            By signing-in you agree to the FARM CART Conditions of Use & Sale.
+            Please see our Privacy Notice, our Cookies Notice and out
+            Internet-Based Ads Notice.
+        </p>
+        <button onClick = {register} className = 'register_button'>Create your FARM-CART account</button>
+       </div>
+    </div>
+  )
 }
 
-export default Login;
+export default Login

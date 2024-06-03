@@ -93,8 +93,8 @@ const Payment = () => {
           </div>
           <div className="payment__address">
             <p>{user?.email}</p>
-            <p>123 React Lane</p>
-            <p>Los Angeles, CA</p>
+            <p>Hyderabad</p>
+            <p>Telangana, India</p>
           </div>
         </div>
 
@@ -132,7 +132,7 @@ const Payment = () => {
                   value={getBasketTotal(basket)} // Part of the homework
                   displayType={"text"}
                   thousandSeparator={true}
-                  prefix={"Rp"}
+                  prefix={"$"}
                 />
 
                 <CardElement onChange={handleChange} />
